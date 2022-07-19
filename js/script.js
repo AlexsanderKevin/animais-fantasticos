@@ -10,6 +10,7 @@ import Funcionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 import ScrollAnima from './modules/scroll-anima.js';
+import {SlideNav} from './modules/slide.js'
 
 // nota: as funções abaixo carregam de forma ASSINCRONA, ou seja, não esperam
 // que a de cima carregue para carregarem, porém os importes serão executados
@@ -44,3 +45,7 @@ menuMobile.init();
 
 const funcionamento = new Funcionamento('[data-semana]');
 funcionamento.init();
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-controls');
